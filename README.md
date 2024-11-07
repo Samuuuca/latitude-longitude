@@ -2,6 +2,7 @@
 
 Este projeto utiliza a biblioteca `geopy` para obter coordenadas geográficas (latitude e longitude) a partir de endereços em uma planilha Excel.
 
+# Comandos para Iniciar
 ```bash
 #Criar variaveis de ambiente
 pip -m venv venv
