@@ -9,6 +9,7 @@ EMAIL = os.getenv('EMAIL')
 
 def lerExecel():
     excel = pd.read_excel(io='./enderecos.xlsx', index_col=0)
+    print(excel)
     excel['LATITUDE'] = excel['LATITUDE'].astype(object)
     excel['LONGITUDE'] = excel['LONGITUDE'].astype(object)
     LINHA = 0
@@ -16,7 +17,7 @@ def lerExecel():
     for row in excel.itertuples(index=True, name=None):
 
         LINHA += 1
-        endereco = f"{row[3]}, {row[5]} {row[6]},SP"
+        endereco = f"{row[3]} {row[4]}, {row[5]},SP"
         print(endereco)
 
         latlong = getLatLon(endereco)
@@ -31,3 +32,5 @@ def getLatLon(adress):
     localizacao = geolocator.geocode(adress)
     
     return [localizacao.latitude, localizacao.longitude]
+
+lerExecel()
