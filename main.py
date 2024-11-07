@@ -1,5 +1,11 @@
 from geopy.geocoders import Nominatim
 import pandas as pd
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+EMAIL = os.getenv('EMAIL')
 
 def lerExecel():
     excel = pd.read_excel(io='./enderecos.xlsx', index_col=0)
@@ -21,7 +27,7 @@ def lerExecel():
 
 def getLatLon(adress):
     
-    geolocator = Nominatim(user_agent='samueldelphino12@gmail.com')
+    geolocator = Nominatim(user_agent=EMAIL)
     localizacao = geolocator.geocode(adress)
     
     return [localizacao.latitude, localizacao.longitude]
