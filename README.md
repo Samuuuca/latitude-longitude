@@ -16,7 +16,7 @@ python main.py
 
 ### Exemplo de Tabela
 
-| id   | Cod.  | Nome  | Rua   | Numero | Cidade |
-| ---- | ------| ----- | ----- | ------ | ------ |
-| 1 | 0001 | Example Nome | Av. Exemplo de Rua | 999 | São Paulo
+| id   | Cod.  | Nome  | Rua   | Numero | Cidade | Latitude | Longitude |
+| ---- | ------| ----- | ----- | ------ | ------ | -------- | --------- |
+| 1 | 0001 | Example Nome | Av. Exemplo de Rua | 999 | São Paulo |  |  |
 
